@@ -1,0 +1,103 @@
+/* Style de la carte principale */
+#card {
+    display: block; /* Affiche la carte comme un bloc */
+    width: 250px; /* Largeur de la carte */
+    padding: 10px; /* Marge intérieure */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 5px 5px 10px 0 grey; /* Ombre pour effet 3D */
+    background-color: rgb(221, 221, 221); /* Couleur de fond gris clair */
+}
+
+/* Style de l'intérieur de la carte */
+#inside {
+    padding: 5px; /* Marge intérieure */
+    background-color: rgba(255, 252, 81, 0.676); /* Fond jaune translucide */
+}
+
+/* Style de l'en-tête (nom + points de vie) */
+header {
+    display: flex; /* Affichage en ligne */
+    font-size: 16px; /* Taille du texte */
+    font-weight: bold; /* Texte en gras */
+    margin-bottom: 5px; /* Espace sous l'en-tête */
+
+    /* Style des parties gauche (nom) et droite (HP + icône) */
+    .left, .right {
+        display: flex; /* Affichage en ligne */
+        width: 50%; /* Chaque partie prend la moitié de l'espace */
+        align-items: center; /* Alignement vertical */
+    }
+
+    /* Alignement spécifique pour la partie droite */
+    .right {
+        flex-direction: row; /* Alignement en ligne */
+        justify-content: flex-end; /* Alignement à droite */
+        gap: 10px; /* Espacement entre les éléments */
+    }
+
+    /* Alignement du texte HP et de l'icône d'énergie */
+    .right #hp, .right img {
+        vertical-align: middle; /* Aligne l'élément verticalement au centre par rapport à la ligne de base */
+    }
+}
+
+/* Style des icônes d'énergie */
+.icon.energy {
+    width: 15px; /* Largeur */
+    height: 15px; /* Hauteur */
+}
+
+/* Style de l'image du monstre */
+figure#art {
+    margin: 0; /* Supprime les marges */
+    padding: 5px 5px 0 5px; /* Marge intérieure */
+    width: calc(100% - 10px); /* Ajuste la largeur pour ne pas dépasser */
+    background-color: lightgrey; /* Fond gris clair */
+
+    /* Style de l'image dans la figure */
+    img {
+        width: 100%; /* L'image prend toute la largeur */
+        height: 175px; /* Hauteur fixe */
+        object-fit: cover; /* Recadrage pour remplir sans déformation */
+    }
+
+    /* Style du texte sous l'image */
+    figcaption {
+        text-align: center; /* Centrage du texte */
+        font-size: smaller; /* Texte plus petit */
+        padding-bottom: 5px; /* Espace en bas */
+    }
+}
+
+/* Style de la section des capacités */
+#capacities {
+    display: flex; /* Affichage en colonne */
+    flex-direction: column; /* Organisation verticale */
+    justify-content: center; /* Centrage vertical */
+    height: 100px; /* Hauteur fixe */
+
+    /* Style de la ligne principale d'une capacité */
+    .main {
+        display: flex; /* Affichage en ligne */
+        flex-direction: row; /* Organisation horizontale */
+        gap: 10px; /* Espacement entre les éléments */
+        font-weight: bold; /* Texte en gras */
+    }
+
+    /* Style du nom de la capacité */
+    .name {
+        flex-grow: 1; /* Prend tout l'espace disponible */
+    }
+
+    /* Style du coût en énergie */
+    .cost {
+        display: flex; /* Affichage en ligne */
+        gap: 5px; /* Espacement entre les icônes */
+        align-items: center; /* Alignement vertical */
+    }
+}
+
+/* Style de la description des capacités */
+.description {
+    font-size: smaller; /* Réduction de la taille du texte */
+}

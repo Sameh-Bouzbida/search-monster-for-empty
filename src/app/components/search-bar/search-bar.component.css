@@ -1,0 +1,37 @@
+/* Style pour la barre de recherche */
+#search-bar {  
+    display: flex;  /* Utilisation de flexbox pour aligner les éléments horizontalement */
+    background-color: white;  /* Fond blanc */
+    border-radius: 40px;  /* Coins arrondis pour un effet moderne */
+    margin: 50px auto;  /* Espacement extérieur : centré horizontalement avec auto */
+    box-shadow: 3px 3px 10px -3px grey;  /* Ombre légère pour un effet d’élévation */
+    overflow: hidden;  /* Empêche le débordement des éléments internes */
+}
+
+/* Style du bouton de recherche */
+button {
+    border: none;  /* Supprime la bordure par défaut */
+    margin: 5px;  /* Espacement autour du bouton */
+    padding: 5px;  /* Espacement interne pour un meilleur rendu */
+    border-radius: 40px;  /* Coins arrondis pour un look uniforme avec la barre */
+    background-color: rgb(205, 205, 255);  /* Couleur de fond bleu clair */
+    width: 30px;  /* Largeur fixe du bouton */
+    cursor: pointer;  /* Change le curseur en "main" au survol pour indiquer un élément interactif */
+}
+
+input {
+    all:unset;
+    flex-grow: 1;
+    padding: 10px 20px;
+}
+
+/* Style de l'image à l’intérieur du bouton */
+button img {
+    max-width: 18px;  /* Taille maximale pour éviter que l'image ne soit trop grande */
+    max-height: 18px;
+}
+
+/* Effet au survol du bouton */
+button:hover {
+    background-color: rgb(179, 179, 255);  /* Assombrit légèrement le bouton au survol */
+}

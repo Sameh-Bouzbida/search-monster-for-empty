@@ -1,0 +1,10 @@
+<!-- Barre de recherche avec un champ de texte et un bouton -->
+<div id="search-bar">  
+    <!-- Champ de saisie permettant à l'utilisateur de taper une recherche -->
+    <input placeholder="Search..." [(ngModel)]="search"  />
+    
+    <!-- Bouton contenant une image pour déclencher la recherche -->
+    <button (click)="searchClick()">
+        <img src="assets/img/search.png" alt="Search Icon">
+    </button>
+</div>
