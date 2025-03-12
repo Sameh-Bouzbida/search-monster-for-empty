@@ -5,3 +5,8 @@
     align-items: center; /* Centre les cartes verticalement */
     justify-content: center; /* Centre les cartes horizontalement */
 }
+
+.center {
+    margin-top: 40px;
+    text-align: center;
+}

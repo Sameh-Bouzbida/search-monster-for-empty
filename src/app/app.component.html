@@ -1,8 +1,17 @@
-<!-- Bouton permettant de basculer entre les monstres disponibles -->
-<button (click)="toggleMonster()">Toggle Monster</button>
-
-<!-- Conteneur affichant la carte du monstre sélectionné -->
+<app-search-bar [(search)]='search'/>
 <div id="card-list">
-   <!-- Composant de carte affichant les informations du monstre actuellement sélectionné -->
-   <app-playing-card [monster]="monsters[selectedMonsterIndex]"/>
+   @for (monster of filteredMonsters(); track monster.name) {
+      <app-playing-card [monster]='monster' />
+   } @empty {
+      <div class="center">No monsters found !</div>
+   }
 </div>
+
+@if (filteredMonsters().length > 0){
+   <div  class="center">Found {{filteredMonsters().length}} monsters !</div>
+}
+
+
+
+
+
